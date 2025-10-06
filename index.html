@@ -1,134 +1,225 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FEEL℃ VILLA | 南軽井沢 — 道具を愛し、景色に生きる</title>
-    <meta name="description" content="南軽井沢に誕生した特別な邸宅『FEEL℃ VILLA』。静けさと開放感、建築と自然の調和を現地でご体感ください。" />
-    <link rel="preload" as="image" href="./assets/hero.jpg" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="logo" href="#top">FEEL℃ VILLA</a>
-      <nav id="nav" class="nav">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FEELDO VILLA | Minami-Karuizawa</title>
+  <meta name="description" content="FEELDO VILLA — 南軽井沢。どこまでも抜ける眺望と、時とともに晴れるこころ。見学予約はメールまたはお電話で。">
+  <link rel="icon" href="favicon.png">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="FEELDO VILLA">FEELDO VILLA</a>
+      <nav class="menu" aria-label="Primary">
         <a href="#concept">Concept</a>
-        <a href="#villa">Villa</a>
+        <a href="#villas">Villas</a>
+        <a href="#features">Features</a>
         <a href="#gallery">Gallery</a>
-        <a href="#visit">Visit</a>
-        <a href="#contact" class="cta">Contact</a>
+        <a class="btn-ghost" href="#reserve">Reserve</a>
       </nav>
-      <button id="menu" class="menu" aria-label="メニューを開く" aria-expanded="false">☰</button>
-    </header>
+    </div>
+  </header>
 
-    <main id="top">
-      <!-- HERO -->
-      <section class="hero" aria-label="Hero">
-        <div class="hero-media">
-          <!-- 画像は ./assets/hero.jpg を配置してください -->
-        </div>
-        <div class="hero-copy container">
-          <h1>南軽井沢に、新しい静けさ。</h1>
-          <p>選ばれた土地に、選ばれた空間を。<br/>建築 × 自然 × 道具が融け合う、FEEL℃ VILLA。</p>
-          <a href="#visit" class="button">現地見学のご案内</a>
-        </div>
-      </section>
-
-      <!-- CONCEPT -->
-      <section id="concept" class="section container">
-        <div class="eyebrow">Concept</div>
-        <h2>道具を愛し、景色に生きる。</h2>
-        <p>
-          光の移ろい、芝庭に落ちる影、窓が切り取る72ゴルフ南コースの眺望。
-          FEEL℃は、素材と納まりに徹底して向き合い、穏やかで凛とした時間をデザインします。
+  <main id="top">
+    <!-- HERO (overlay copy) -->
+    <section class="hero">
+      <img class="hero-bg" src="assets/hero.jpg" alt="FEELDO VILLA hero">
+      <div class="hero-shade"></div>
+      <div class="hero-copy container">
+        <h1 class="hero-title">どこまでも抜ける眺望と　時とともに晴れるこころ</h1>
+        <p class="hero-lede">
+          南軽井沢の明るく爽やかで開放的な空気を建築に取り込み生活とひとつにする。<br>
+          FEEL℃ VILLA — 自然と建築が響き合う、軽井沢の邸。
         </p>
-        <ul class="bullets">
-          <li>4LDK＋駐車3台、家族も客人も心地よい動線計画</li>
-          <li>南面の大開口と深い庇、明るさと静けさの両立</li>
-          <li>芝庭テラスと屋内が一体化するフロアレベル</li>
-        </ul>
-      </section>
-
-      <!-- VILLA -->
-      <section id="villa" class="section alt">
-        <div class="container grid-2">
-          <div>
-            <div class="eyebrow">Villa</div>
-            <h2>開放と静謐が同居する設計。</h2>
-            <p>
-              素材は静かに、ディテールは端正に。室内外の連続性を高め、自然と過ごす贅沢を日常に。
-            </p>
-            <dl class="specs">
-              <div><dt>所在</dt><dd>長野県軽井沢町 南軽井沢</dd></div>
-              <div><dt>間取り</dt><dd>4LDK＋パントリー＋収納</dd></div>
-              <div><dt>駐車</dt><dd>3台（EV対応）</dd></div>
-              <div><dt>販売価格</dt><dd>3億5,000万円弱（予定）</dd></div>
-            </dl>
-            <a href="#contact" class="button ghost">資料請求</a>
-          </div>
-          <div class="feature-media">
-            <!-- 画像は ./assets/living-1.jpg を配置してください -->
-            <div class="image image-cover" data-src="./assets/living-1.jpg"></div>
-          </div>
+        <div class="hero-cta">
+          <a class="btn-primary" href="#reserve">見学予約 / Mail to Reserve</a>
         </div>
-      </section>
-
-      <!-- GALLERY -->
-      <section id="gallery" class="section container">
-        <div class="eyebrow">Gallery</div>
-        <h2>光と陰影、素材の呼吸。</h2>
-        <div class="gallery">
-          <!-- 各サムネイル画像を assets に配置してください -->
-          <a href="./assets/exterior-1.jpg"><img src="./assets/exterior-1.jpg" alt="外観 1" loading="lazy"/></a>
-          <a href="./assets/living-2.jpg"><img src="./assets/living-2.jpg" alt="リビング 2" loading="lazy"/></a>
-          <a href="./assets/dining-1.jpg"><img src="./assets/dining-1.jpg" alt="ダイニング 1" loading="lazy"/></a>
-          <a href="./assets/bedroom-1.jpg"><img src="./assets/bedroom-1.jpg" alt="寝室 1" loading="lazy"/></a>
-          <a href="./assets/bath-1.jpg"><img src="./assets/bath-1.jpg" alt="バス 1" loading="lazy"/></a>
-          <a href="./assets/garden-1.jpg"><img src="./assets/garden-1.jpg" alt="庭 1" loading="lazy"/></a>
-        </div>
-      </section>
-
-      <!-- VISIT -->
-      <section id="visit" class="section alt">
-        <div class="container grid-2">
-          <div>
-            <div class="eyebrow">Visit</div>
-            <h2>現地見学について</h2>
-            <p>
-              ご見学は予約制にて随時承っております。連休期間中はスタッフが常駐する日程もございます。
-            </p>
-            <ul class="bullets">
-              <li>ご希望日時をお知らせください</li>
-              <li>担当より折り返しご連絡します</li>
-              <li>アクセス・駐車案内をお送りします</li>
-            </ul>
-          </div>
-          <div class="feature-media">
-            <!-- 画像は ./assets/map.jpg を配置してください -->
-            <div class="image image-cover" data-src="./assets/map.jpg"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="section container">
-        <div class="eyebrow">Contact</div>
-        <h2>お問い合わせ</h2>
-        <p>株式会社FEEL℃（Field）／ 担当：後藤壮大</p>
-        <div class="contact-card">
-          <a href="tel:090-4376-2942" class="button">お電話</a>
-          <a href="mailto:info@example.com" class="button ghost">メール</a>
-          <a href="https://suumo.jp/" class="button ghost" target="_blank" rel="noopener">SUUMO掲載</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <small>&copy; <span id="y"></span> FEEL℃ — All rights reserved.</small>
       </div>
-    </footer>
+    </section>
 
-    <script src="./script.js"></script>
-  </body>
+    <!-- CONCEPT (text + image side-by-side) -->
+    <section id="concept" class="section">
+      <div class="container two-col">
+        <div class="col text">
+          <div class="eyebrow">Concept</div>
+          <h2 class="hjp">コンセプト</h2>
+          <div class="rule"></div>
+          <p class="lead">
+            こころをほどき　ときをあむ。<br>
+            晴れた昼下がり、風に誘われ庭で遊ぶ。夜はテラスで星を仰ぐ。薪ストーブの炎が静かに夜をあたためる。<br>
+            都会とは異なる時間軸の中で、思索し、癒され、本来の自分に還る。<br>
+            静かで上質な時が、思考と感性にそっと寄り添います。
+          </p>
+        </div>
+        <div class="col media">
+          <figure class="ratio">
+            <img src="assets/concept.jpg" alt="薪ストーブと自然が響き合う室内">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- VILLAS (uniform images) -->
+    <section id="villas" class="section">
+      <div class="container">
+        <div class="eyebrow">Villas</div>
+        <h2 class="hjp">邸宅</h2>
+        <div class="rule"></div>
+        <div class="grid-3">
+          <article class="card">
+            <figure class="ratio">
+              <img src="assets/villa_a.jpg" alt="A棟 外観">
+            </figure>
+            <div class="cap">
+              <div class="en">Villa A — Completed Sep 2025</div>
+              <div class="jp">A棟 — 2025年9月竣工</div>
+            </div>
+          </article>
+          <article class="card">
+            <figure class="ratio">
+              <img src="assets/villa_b.jpg" alt="B棟 外観">
+            </figure>
+            <div class="cap">
+              <div class="en">Villa B — Completed Sep 2025</div>
+              <div class="jp">B棟 — 2025年9月竣工</div>
+            </div>
+          </article>
+          <article class="card">
+            <figure class="ratio">
+              <img src="assets/villa_c.jpg" alt="C棟 ロケーション（空撮）">
+            </figure>
+            <div class="cap">
+              <div class="en">Villa C — Planned 2026</div>
+              <div class="jp">C棟 — 2026年計画</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES (uniform images) -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="eyebrow">Features</div>
+        <h2 class="hjp">特長</h2>
+        <div class="rule"></div>
+
+        <div class="grid-2">
+          <article class="feat card">
+            <figure class="ratio"><img src="assets/feature1.jpg" alt="芝庭と眺望"></figure>
+            <div class="cap">
+              <div class="en">Garden Lawn & Panorama</div>
+              <div class="jp">大きな芝庭の先には小高い丘と大きな空が広がる軽井沢でも稀有な眺望を有します。</div>
+            </div>
+          </article>
+
+          <article class="feat card">
+            <figure class="ratio"><img src="assets/feature2.jpg" alt="4LDK + 3台駐車"></figure>
+            <div class="cap">
+              <div class="en">4BR + Parking for 3</div>
+              <div class="jp">家族＋ゲスト、＋ご両親といったニーズにこたえる間取りとスペースをご用意しています。</div>
+            </div>
+          </article>
+
+          <article class="feat card">
+            <figure class="ratio"><img src="assets/feature3.jpg" alt="ホテルライクな水回り"></figure>
+            <div class="cap">
+              <div class="en">Hotel-like Wet Areas</div>
+              <div class="jp">家族みんなで使ったり、ベッドルーム専用となったり可変する水回りを2か所ご用意しています。</div>
+            </div>
+          </article>
+
+          <article class="feat card">
+            <figure class="ratio"><img src="assets/feature4.jpg" alt="アクティビティを愉しむ"></figure>
+            <div class="cap">
+              <div class="en">For Active Days</div>
+              <div class="jp">外部収納や自転車も置ける広い玄関、庭のバーベキュースペースなど、軽井沢でのアクティビティを愉しむ工夫を施しています。</div>
+            </div>
+          </article>
+
+          <article class="feat card">
+            <figure class="ratio"><img src="assets/feature5.jpg" alt="確かな施工監修"></figure>
+            <div class="cap">
+              <div class="en">Trusted Construction Oversight</div>
+              <div class="jp">設計者自身が土地の選定、設計から施工までを一貫監修し、品質を担保。</div>
+            </div>
+          </article>
+
+          <article class="feat card">
+            <figure class="ratio"><img src="assets/feature6.jpg" alt="立地"></figure>
+            <div class="cap">
+              <div class="en">Location</div>
+              <div class="jp">南軽井沢72ゴルフコース沿いのほぼ最後のエリア。インターから渋滞をせずにアクセスでき、風通しが良く空がとても広い気持ちの良いエリアです。</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY (8 images: 01,02,04,05,06,07,08,10) -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="eyebrow">Gallery</div>
+        <h2 class="hjp">ギャラリー</h2>
+        <div class="rule"></div>
+        <div class="grid-2">
+          <figure class="card ratio"><img src="assets/gallery01.jpg" alt="Gallery 01"></figure>
+          <figure class="card ratio"><img src="assets/gallery02.jpg" alt="Gallery 02"></figure>
+          <figure class="card ratio"><img src="assets/gallery04.jpg" alt="Gallery 04"></figure>
+          <figure class="card ratio"><img src="assets/gallery05.jpg" alt="Gallery 05"></figure>
+          <figure class="card ratio"><img src="assets/gallery06.jpg" alt="Gallery 06"></figure>
+          <figure class="card ratio"><img src="assets/gallery07.jpg" alt="Gallery 07"></figure>
+          <figure class="card ratio"><img src="assets/gallery08.jpg" alt="Gallery 08"></figure>
+          <figure class="card ratio"><img src="assets/gallery10.jpg" alt="Gallery 10"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVE -->
+    <section id="reserve" class="section">
+      <div class="container">
+        <div class="eyebrow">Reserve / Contact</div>
+        <h2 class="hjp">見学予約・お問い合わせ</h2>
+        <div class="rule"></div>
+
+        <div class="reserve card-inline">
+          <p class="lead">
+            見学予約は、土日・平日ともにご案内可能です。<br>
+            ご希望日時をメールまたはお電話にてお知らせください。
+          </p>
+          <div class="contacts">
+            <div>📞 <a href="tel:+819043762942">090-4376-2942</a></div>
+            <div>✉️ <a href="mailto:info@feeldo.co.jp">info@feeldo.co.jp</a></div>
+          </div>
+          <div class="reserve-actions">
+            <a class="btn-primary" href="mailto:info@feeldo.co.jp?subject=FEELDO%20VILLA%20見学予約&body=ご希望日時：%0D%0Aお名前：%0D%0Aご連絡先：%0D%0Aご質問：">Mail to Reserve</a>
+            <a class="btn-ghost" target="_blank" rel="noopener" href="https://maps.app.goo.gl/tqKMsfuVV3cmibBa7">📍 Google Mapsで見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container foot">
+      <nav class="foot-links">
+        <a target="_blank" rel="noopener" href="https://www.instagram.com/feeldo_official/">Instagram</a>
+        <span class="dot">•</span>
+        <a target="_blank" rel="noopener" href="https://suumo.jp/ikkodate/nagano/sc_kitasakugun/nc_78096645/">SUUMO A棟</a>
+        <span class="dot">•</span>
+        <a target="_blank" rel="noopener" href="https://suumo.jp/ikkodate/nagano/sc_kitasakugun/nc_78142741/">SUUMO B棟</a>
+      </nav>
+      <small>© FEEL℃</small>
+    </div>
+  </footer>
+</body>
 </html>
