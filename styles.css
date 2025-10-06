@@ -404,3 +404,30 @@ img { max-width: 100%; display: block; }
 .ext-link a:hover {
   text-decoration: underline;
 }
+/* === Hero 安定化調整（上下余白微調整） === */
+.hero-copy {
+  bottom: 12% !important;  /* 少しだけ上寄せ */
+  left: 10% !important;
+}
+
+/* === Concept画像 少しだけ拡大微調整＆位置調整 === */
+.concept-media .concept-img {
+  /* height を少しだけ増やして、下部をさらに見えるように */
+  height: 135% !important;
+  transform: translate(-7.5%, -22%) !important;
+}
+
+/* === 日本語テキストの読みやすさ強化 === */
+.lead, .contacts p {
+  letter-spacing: 0.025em;  /* 少し字間を広げる */
+  line-height: 1.95;        /* 行間をゆるくする */
+}
+
+/* === Reserve リンクの余白調整 === */
+.ext-links {
+  margin-top: 14px !important;
+}
+.ext-link {
+  font-size: 14px !important;
+  line-height: 1.9 !important;
+}
