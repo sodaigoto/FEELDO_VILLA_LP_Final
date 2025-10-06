@@ -1,51 +1,61 @@
-/* === HERO修正 === */
-.hero {
-  position: relative;
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  background: #000;
+:root {
+  --bg: #ffffff;
+  --ink: #2f2f2f;
+  --muted: #555;
+  --line: #e5e5e5;
+  --accent: #b0a996;
+  --maxw: 1120px;
 }
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink)}
+body{
+  font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.9;
+  font-size:14px;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
-.hero-copy {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-}
-.hero-title {
-  font-size: clamp(20px, 3.4vw, 36px);
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  margin-bottom: 10px;
-}
-.hero-lede {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #fff;
-}
+img{max-width:100%;display:block}
+.container{width:min(var(--maxw),90vw);margin-inline:auto}
 
-/* === CONCEPT 画像トリミング（薪ストーブ下部表示） === */
-.concept-media .concept-img {
-  object-fit: cover;
-  object-position: center 65%; /* ← 下方向を多く見せる */
-  width: 100%;
-  height: 100%;
-}
+/* Header */
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:12px;letter-spacing:.14em;color:#000;text-decoration:none}
+.menu{display:flex;gap:22px;align-items:center}
+.menu a{color:var(--muted);text-decoration:none;font-size:12px}
+.menu a:hover{color:#111}
+.cta{padding:6px 12px;border:1px solid var(--line);border-radius:999px}
 
-/* === RESERVE 連絡先リンク調整 === */
-.contacts a {
-  color: #2f2f2f;
-  text-decoration: none;
-}
-.contacts a:hover {
-  text-decoration: underline;
-}
+/* Hero */
+.hero{position:relative;min-height:85vh;overflow:hidden;display:flex;align-items:end;justify-content:left}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(255,255,255,0.85),transparent 60%)}
+.hero .copy{position:relative;z-index:2;padding:64px 0;color:var(--ink)}
+.kicker{color:var(--accent);font-size:12px;letter-spacing:.25em;text-transform:uppercase}
+.h1{font-family:"Playfair Display",serif;font-size:clamp(22px,4.5vw,40px);font-weight:500;line-height:1.4;margin:.3em 0}
+.thin{font-weight:300}
+.lede{max-width:65ch;color:var(--muted);font-size:14px}
+.btns{display:flex;gap:10px;margin-top:20px}
+.btn{padding:10px 18px;border-radius:999px;text-decoration:none;font-size:12px}
+.btn.primary{background:var(--accent);color:#fff;border:none}
+.btn.ghost{border:1px solid var(--line);color:#333}
+.btn.ghost:hover{border-color:#000}
+
+/* Section */
+.section{padding:100px 0;border-top:1px solid var(--line)}
+.eyebrow{color:var(--accent);font-size:12px;letter-spacing:.25em}
+h2{font-family:"Playfair Display",serif;font-size:clamp(20px,3.2vw,28px);margin:.2em 0;color:#000}
+.lead{font-size:14px;color:var(--muted);max-width:70ch}
+.note{margin-top:18px;border-left:1px solid var(--line);padding-left:18px;color:var(--muted);font-size:13.5px}
+
+/* Villas / Features */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:26px}
+.card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.card img{width:100%;height:200px;object-fit:cover}
+.body{padding:10px 14px}
+.title{font-weight:600}
+.meta{font-size:12px;color:var(--muted)}
+
+/* Footer */
+footer{border-top:1px solid var(--line);color:#666;padding:30px 0;text-align:center;font-size:12px}
