@@ -340,3 +340,24 @@ img { max-width: 100%; display: block; }
   line-height: 1.8;
   letter-spacing: .02em;
 }
+/* === Reserve内の外部リンク群（■アイコン＋改行） === */
+.ext-links {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ext-link {
+  font-size: 13.5px;
+  line-height: 1.8;
+  letter-spacing: .02em;
+  color: #222;
+  margin: 0;
+}
+.ext-link a {
+  color: #222;
+  text-decoration: none;
+}
+.ext-link a:hover {
+  text-decoration: underline;
+}
