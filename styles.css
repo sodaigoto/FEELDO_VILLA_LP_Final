@@ -185,3 +185,54 @@ body {
   .grid-2 { grid-template-columns: 1fr; }
   .card-inline { grid-template-columns: 1fr; }
 }
+/* === HERO修正 === */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: #000;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+.hero-title {
+  font-size: clamp(20px, 3.4vw, 36px);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+.hero-lede {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #fff;
+}
+
+/* === CONCEPT 画像トリミング（薪ストーブ下部表示） === */
+.concept-media .concept-img {
+  object-fit: cover;
+  object-position: center 65%; /* ← 下方向を多く見せる */
+  width: 100%;
+  height: 100%;
+}
+
+/* === RESERVE 連絡先リンク調整 === */
+.contacts a {
+  color: #2f2f2f;
+  text-decoration: none;
+}
+.contacts a:hover {
+  text-decoration: underline;
+}
