@@ -1,11 +1,14 @@
 :root{
   --bg:#ffffff; --ink:#2f2f2f; --muted:#888; --line:#e8e8e8; --accent:#b0a996; --maxw:1120px;
 }
+
+/* Base */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--ink)}
 body{
   font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  line-height:1.8; font-size:14px; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  font-size:14px; line-height:1.9; letter-spacing:0.05em; color:#2f2f2f;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
 }
 img{max-width:100%;display:block}
 .container{width:min(var(--maxw),90vw);margin-inline:auto}
@@ -18,7 +21,7 @@ img{max-width:100%;display:block}
 .menu a{color:var(--muted); text-decoration:none; font-size:12px}
 .menu a:hover{color:#111}
 
-/* === HERO === */
+/* === HERO（左下配置・黒背景×白文字・白枠ボタン） === */
 .hero{
   position:relative; min-height:85vh; display:flex; align-items:flex-end; justify-content:flex-start;
   text-align:left; overflow:hidden; background-color:#000;
@@ -27,28 +30,37 @@ img{max-width:100%;display:block}
   position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center center; z-index:1; filter:brightness(0.65);
 }
 .hero-copy{position:relative; z-index:2; color:#fff; padding:80px 6% 90px; max-width:640px;}
+/* ※ feeldcトーンのタイポ値で統一（3行とも） */
 .hero-title,.hero-lede{
-  font-size:clamp(15px,2.5vw,26px); font-weight:400; line-height:1.6; letter-spacing:0.12em;
-  color:#fff; margin-bottom:10px; text-shadow:0 2px 8px rgba(0,0,0,0.35);
+  font-family:"Noto Sans JP",sans-serif;
+  font-weight:400;
+  font-size:clamp(16px, 2.6vw, 18px);  /* 控えめスケール */
+  line-height:1.7;
+  letter-spacing:0.05em;
+  color:#fff;
+  margin:0 0 10px;
+  text-shadow:0 2px 8px rgba(0,0,0,0.35);
 }
-.hero-cta{margin-top:28px;}
+.hero-cta{margin-top:20px;}
 .btn-hero{
-  display:inline-block; padding:12px 26px; border:1px solid #fff; color:#fff; background:transparent; border-radius:999px;
-  font-size:13px; letter-spacing:0.08em; text-decoration:none; font-weight:400; transition:all 0.35s ease;
+  display:inline-block; padding:12px 24px; border:1px solid #fff; color:#fff; background:transparent; border-radius:999px;
+  font-size:13px; letter-spacing:0.06em; text-decoration:none; transition:all .3s ease;
 }
-.btn-hero:hover{background:#fff;color:#000;border-color:#fff;transform:translateY(-2px);}
+.btn-hero:hover{background:#fff;color:#000;border-color:#fff}
 
-/* === CONCEPT === */
+/* === Section Scaffolding === */
 .section{padding:110px 0;border-bottom:1px solid var(--line)}
-.eyebrow{font-family:"Playfair Display",Georgia,serif;font-size:16px;color:#111}
-.hjp{margin:4px 0 0;font-weight:500}
+.eyebrow{font-family:"Playfair Display",Georgia,serif;font-size:15px;letter-spacing:.06em;color:#111}
+.hjp{margin:4px 0 0;font-family:"Noto Sans JP",sans-serif;font-weight:500;font-size:22px;line-height:1.6;letter-spacing:.04em;color:#111}
 .rule{height:1px;background:var(--line);margin:18px 0 24px}
-.lead{color:#555;max-width:72ch}
+.lead{font-family:"Noto Sans JP",sans-serif;font-size:14px;line-height:1.9;letter-spacing:.05em;color:#555}
+
+/* Concept 2col */
 .two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
 @media(max-width:920px){.two-col{grid-template-columns:1fr;gap:18px}}
 .concept-media .concept-img{object-fit:cover;object-position:center 55%;width:100%;height:100%}
 
-/* === GRIDS === */
+/* Cards / Grids 共通 */
 .ratio{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:#fff}
 .ratio>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -61,16 +73,22 @@ img{max-width:100%;display:block}
 .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 @media(max-width:840px){.grid-2{grid-template-columns:1fr}}
 
-/* === RESERVE === */
+/* Reserve */
 .card-inline{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;padding:18px;border:1px solid var(--line);border-radius:12px;background:#fff}
 @media(max-width:900px){.card-inline{grid-template-columns:1fr}}
 .contacts{text-align:left;padding-left:4px}
-.contacts p{margin:0;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;font-weight:400;line-height:1.9;letter-spacing:0.05em;color:#2f2f2f}
+.contacts p{
+  margin:0; font-family:"Noto Sans JP",sans-serif; font-size:13.5px; line-height:1.9; letter-spacing:.05em; color:#2f2f2f; font-weight:400;
+}
 .contacts a{color:#2f2f2f;text-decoration:none}
 .contacts a:hover{text-decoration:underline}
 .reserve-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.btn-primary{display:inline-block;padding:10px 16px;border-radius:999px;text-decoration:none;background:#111;color:#fff;font-size:12px}
+.btn-primary:hover{opacity:.9}
+.btn-ghost{padding:8px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none}
+.btn-ghost:hover{border-color:#111}
 
-/* === FOOTER === */
+/* Footer */
 .footer{padding:40px 0}
 .foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .foot-links{display:flex;gap:10px;align-items:center;color:#666;font-size:12px}
@@ -79,7 +97,7 @@ img{max-width:100%;display:block}
 .foot small{color:#666}
 .dot{opacity:.6}
 
-/* === Responsive === */
+/* Responsive */
 @media(max-width:640px){
   .section{padding:80px 0}
   .hero{min-height:70vh}
