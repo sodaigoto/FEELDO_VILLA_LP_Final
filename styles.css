@@ -80,3 +80,108 @@ img{max-width:100%;display:block}
 /* Reveal (subtle) */
 .reveal{opacity:0; transform:translateY(8px); transition:opacity .5s ease, transform .5s ease}
 .reveal.visible{opacity:1; transform:none}
+/* ===== Polishing Tweaks (White × Minimal) ===== */
+
+/* タイポ全体を繊細に */
+html, body { -webkit-text-size-adjust: 100%; }
+body {
+  font-feature-settings: "palt"; /* プロポーショナル和文 */
+  letter-spacing: .01em;
+  font-size: 13.5px; /* ほんの少しだけ小さく */
+  color: #2f2f2f;
+}
+
+/* ヘッダーの密度を少し下げる（上質感） */
+.header { border-bottom-color: #eee; }
+.nav { padding: 8px 0; }
+.brand { letter-spacing: .18em; }
+
+/* Hero：コピーの可読性UP（下部のホワイトグラデを強める） */
+.hero { min-height: 78vh; }
+.hero-shade{
+  background: linear-gradient(
+    to top,
+    rgba(255,255,255,.78) 0%,
+    rgba(255,255,255,.42) 40%,
+    rgba(255,255,255,0) 78%
+  );
+}
+.hero-copy { padding: 64px 0 60px; }
+.hero-title {
+  font-size: clamp(20px, 3.2vw, 30px);
+  font-weight: 500;
+  letter-spacing: .02em;
+  line-height: 1.28;
+  color: #111;
+  margin: 0 0 6px 0;
+}
+.hero-lede {
+  color: #444;
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 64ch;
+}
+
+/* セクション余白とラインをより繊細に */
+.section { padding: 100px 0; }
+.rule { background: #eee; margin: 16px 0 22px 0; }
+.eyebrow { font-size: 15px; color: #141414; }
+
+/* Concept：2カラムの呼吸感 */
+.two-col { gap: 32px; align-items: start; }
+.col.text .lead { color: #4b4b4b; }
+@media (max-width:920px){
+  .two-col { gap: 18px; }
+}
+
+/* 画像の角Rとボーダーの一体感 */
+.ratio {
+  border-radius: 14px;
+  border-color: #ededed;
+}
+
+/* Villas / Features のグリッド密度を最適化 */
+.grid-3 { gap: 18px; }
+.grid-2 { gap: 20px; }
+.cap { color: #666; }
+.cap .en { color: #141414; }
+.cap .jp { color: #6f6f6f; }
+
+/* Gallery：余白を少し広めに、写真を主役に */
+#gallery .grid-2 { gap: 22px; }
+#gallery .card { border-color: #eee; }
+
+/* Reserve：ボックスの静けさ・ボタンの視認性 */
+.card-inline {
+  gap: 26px;
+  padding: 20px;
+  border-color: #ededed;
+}
+.reserve-actions .btn-primary {
+  background: #171717;
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.reserve-actions .btn-ghost {
+  border-color: #e6e6e6;
+  color: #333;
+}
+.contacts a { color: #2f2f2f; }
+
+/* Footer：リンクの気配をもっと控えめに */
+.foot { gap: 10px; }
+.foot-links { gap: 12px; color: #666; }
+.foot-links a { color: #666; }
+.foot-links a:hover { color: #111; }
+.footer { padding: 36px 0; }
+
+/* スマホ最適化（余白と見出しの密度調整） */
+@media (max-width: 640px){
+  .section { padding: 80px 0; }
+  .hero { min-height: 70vh; }
+  .hero-copy { padding: 44px 0 48px; }
+  .hero-lede { max-width: 72ch; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .card-inline { grid-template-columns: 1fr; }
+}
