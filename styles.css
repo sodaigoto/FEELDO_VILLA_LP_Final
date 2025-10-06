@@ -431,3 +431,17 @@ img { max-width: 100%; display: block; }
   font-size: 14px !important;
   line-height: 1.9 !important;
 }
+/* Hero：テキストの上下位置を1～2%だけ上げて安定 */
+.hero-copy{ bottom:12%; }
+
+/* Concept：床の見え方をわずかに増やして構図を安定 */
+.concept-media .concept-img{
+  height:135%;
+  transform: translate(-7.5%, -22%);
+}
+
+/* 日本語テキストの可読性をわずかに向上 */
+.lead, .contacts p{ letter-spacing:.025em; line-height:1.95; }
+
+/* Reserveリンク：行間とサイズを微調整 */
+.ext-link{ font-size:14px; line-height:1.9; }
