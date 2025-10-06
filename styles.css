@@ -1,17 +1,13 @@
-:root {
-  --bg:#ffffff; --ink:#2f2f2f; --muted:#888; --line:#e8e8e8; --accent:#b0a996; --maxw:1120px;
-}
-
-/* === HERO: reference site matched === */
+/* === HERO修正 === */
 .hero {
   position: relative;
-  min-height: 82vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background-color: #000;
+  background: #000;
 }
 .hero-bg {
   position: absolute;
@@ -19,71 +15,33 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
-  z-index: 1;
-  filter: brightness(0.65);
 }
 .hero-copy {
   position: relative;
   z-index: 2;
   color: #fff;
-  padding: 0 4%;
-  max-width: 760px;
 }
-.hero-title,
-.hero-lede {
-  font-family: "Noto Sans JP", sans-serif;
+.hero-title {
+  font-size: clamp(20px, 3.4vw, 36px);
   font-weight: 400;
   letter-spacing: 0.05em;
-  line-height: 1.65;
-  font-size: clamp(16px, 2.6vw, 24px);
+  margin-bottom: 10px;
+}
+.hero-lede {
+  font-size: 14px;
+  line-height: 1.8;
   color: #fff;
-  margin: 0 0 10px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.35);
-}
-.hero-cta {
-  margin-top: 20px;
-}
-.btn-hero {
-  display: inline-block;
-  padding: 12px 24px;
-  border: 1px solid #fff;
-  color: #fff;
-  background: transparent;
-  border-radius: 999px;
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.btn-hero:hover {
-  background: #fff;
-  color: #000;
-  border-color: #fff;
 }
 
-/* === CONCEPT === */
+/* === CONCEPT 画像トリミング（薪ストーブ下部表示） === */
 .concept-media .concept-img {
   object-fit: cover;
-  object-position: center 55%;
+  object-position: center 65%; /* ← 下方向を多く見せる */
   width: 100%;
   height: 100%;
 }
 
-/* === RESERVE (フォント合わせ) === */
-.contacts {
-  text-align: left;
-  padding-left: 4px;
-}
-.contacts p {
-  margin: 0;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 13.5px;
-  font-weight: 400;
-  line-height: 1.9;
-  letter-spacing: 0.05em;
-  color: #2f2f2f;
-}
+/* === RESERVE 連絡先リンク調整 === */
 .contacts a {
   color: #2f2f2f;
   text-decoration: none;
