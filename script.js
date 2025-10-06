@@ -1,23 +1,16 @@
-// Mobile menu
-const menuBtn = document.getElementById('menu');
-const nav = document.getElementById('nav');
-if (menuBtn && nav) {
-  menuBtn.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
   });
-}
-
-// Lazy set background images for .image-cover
-document.querySelectorAll('.image-cover').forEach(el => {
-  const src = el.getAttribute('data-src');
-  if (src) {
-    const i = new Image();
-    i.onload = () => { el.style.backgroundImage = `url('${src}')`; };
-    i.src = src;
-  }
 });
 
-// Year
-const y = document.getElementById('y');
-if (y) y.textContent = new Date().getFullYear();
+// Reveal on scroll
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+  });
+},{threshold:0.14});
+document.querySelectorAll('.section').forEach(el=>io.observe(el));
