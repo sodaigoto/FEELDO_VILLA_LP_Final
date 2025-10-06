@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FEELDO VILLA | Minami-Karuizawa</title>
+  <title>FEEL℃ VILLA | Minami-Karuizawa</title>
   <meta name="description" content="景色がひらける。心が晴れる。FEEL℃ VILLA KARUIZAWA 光と建築がとけあう軽井沢の邸">
   <link rel="icon" href="favicon.png">
 
@@ -11,13 +11,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet"/>
+
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- Header -->
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="#top">FEELDO VILLA</a>
+      <!-- FEEL℃ VILLA（スマホでは非表示） -->
+      <a class="brand" href="#top">FEEL℃ VILLA</a>
       <nav class="menu">
         <a href="#concept">Concept</a>
         <a href="#villas">Villas</a>
@@ -29,9 +32,9 @@
   </header>
 
   <main id="top">
-    <!-- HERO -->
+    <!-- HERO（黒背景・白文字・左下配置） -->
     <section class="hero">
-      <img class="hero-bg" src="assets/hero.jpg" alt="FEELDO VILLA hero">
+      <img class="hero-bg" src="assets/hero.jpg" alt="FEEL℃ VILLA hero">
       <div class="hero-copy container">
         <p class="hero-kicker">EXCLUSIVE VILLAS IN KARUIZAWA</p>
         <h1 class="hero-title">景色がひらける。心が晴れる。</h1>
@@ -45,7 +48,7 @@
       </div>
     </section>
 
-    <!-- CONCEPT -->
+    <!-- CONCEPT（詩的改行／画像は縦30%拡大＋下方10%シフト） -->
     <section id="concept" class="section">
       <div class="container two-col">
         <div class="col text">
@@ -70,7 +73,39 @@
       </div>
     </section>
 
-    <!-- FEATURES -->
+    <!-- VILLAS -->
+    <section id="villas" class="section">
+      <div class="container">
+        <div class="eyebrow">Villas</div>
+        <h2 class="hjp">邸宅</h2>
+        <div class="rule"></div>
+        <div class="grid-3">
+          <article class="card">
+            <figure class="ratio"><img loading="lazy" decoding="async" src="assets/villa_a.jpg" alt="A棟 外観"></figure>
+            <div class="cap">
+              <div class="en">Villa A — Completed Sep 2025</div>
+              <div class="jp">A棟 — 2025年9月竣工</div>
+            </div>
+          </article>
+          <article class="card">
+            <figure class="ratio"><img loading="lazy" decoding="async" src="assets/villa_b.jpg" alt="B棟 外観"></figure>
+            <div class="cap">
+              <div class="en">Villa B — Completed Sep 2025</div>
+              <div class="jp">B棟 — 2025年9月竣工</div>
+            </div>
+          </article>
+          <article class="card">
+            <figure class="ratio"><img loading="lazy" decoding="async" src="assets/villa_c.jpg" alt="C棟 ロケーション（空撮）"></figure>
+            <div class="cap">
+              <div class="en">Villa C — Planned 2026</div>
+              <div class="jp">C棟 — 2026年計画</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES（見出しは日英併記・本文差し替え済み） -->
     <section id="features" class="section">
       <div class="container">
         <div class="eyebrow">Features</div>
@@ -167,7 +202,7 @@
       </div>
     </section>
 
-    <!-- RESERVE -->
+    <!-- RESERVE（お問い合わせ＋■リンク＋地図座標URL） -->
     <section id="reserve" class="section">
       <div class="container">
         <div class="eyebrow">Reserve / Contact</div>
@@ -189,16 +224,18 @@
               🌐 <a href="https://feeldo.co.jp/" target="_blank">https://feeldo.co.jp/</a>
             </p>
 
+            <!-- 公式リンク群（■アイコン＋縦並び） -->
             <div class="ext-links">
-              <p class="ext-link">■ <a target="_blank" href="https://www.instagram.com/feeldo_official/">Instagram ｜ その他の写真や動画はこちら</a></p>
-              <p class="ext-link">■ <a target="_blank" href="https://suumo.jp/ikkodate/nagano/sc_kitasakugun/nc_78096645/">SUUMO ｜ A棟の面積や価格などの詳細はこちら</a></p>
-              <p class="ext-link">■ <a target="_blank" href="https://suumo.jp/ikkodate/nagano/sc_kitasakugun/nc_78142741/">SUUMO ｜ B棟の面積や価格などの詳細はこちら</a></p>
+              <p class="ext-link">■ <a target="_blank" rel="noopener" href="https://www.instagram.com/feeldo_official/">Instagram ｜ その他の写真や動画はこちら</a></p>
+              <p class="ext-link">■ <a target="_blank" rel="noopener" href="https://suumo.jp/ikkodate/nagano/sc_kitasakugun/nc_78096645/">SUUMO ｜ A棟の面積や価格などの詳細はこちら</a></p>
+              <p class="ext-link">■ <a target="_blank" rel="noopener" href="https://suumo.jp/ikkodate/nagano/sc_kitasakugun/nc_78142741/">SUUMO ｜ B棟の面積や価格などの詳細はこちら</a></p>
             </div>
           </div>
 
           <div class="reserve-actions">
             <a class="btn-primary" href="mailto:info@feeldo.co.jp?subject=FEELDO%20VILLA%20見学予約&body=ご希望日時：%0D%0Aお名前：%0D%0Aご連絡先：%0D%0Aご質問：">Mail to Reserve</a>
-            <a class="btn-ghost" target="_blank" rel="noopener" href="https://maps.app.goo.gl/tqKMsfuVV3cmibBa7">📍 Google Mapsで見る</a>
+            <!-- 正確な座標指定のGoogleマップURL -->
+            <a class="btn-ghost" target="_blank" rel="noopener" href="https://www.google.com/maps?q=36.307382167751115,138.6292358153694">📍 Google Mapsで見る</a>
           </div>
         </div>
       </div>
