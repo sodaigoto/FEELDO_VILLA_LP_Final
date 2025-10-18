@@ -243,10 +243,27 @@
           </div>
 
           <div class="reserve-actions">
-            <a class="btn-primary" href="mailto:info@feeldo.co.jp?subject=FEELDO%20VILLA%20見学予約&body=ご希望日時：%0D%0Aお名前：%0D%0Aご連絡先：%0D%0Aご質問：">Mail to Reserve</a>
+            <a class="btn-primary"
+   href="mailto:info@feeldo.co.jp?subject=FEELDO%20VILLA%20見学予約&body=ご希望日時：%0D%0Aお名前：%0D%0Aご連絡先：%0D%0Aご質問："
+   onclick="gtag('event','email_click',{
+     event_category:'contact',
+     event_label:'Mail to Reserve',
+     email:'info@feeldo.co.jp',
+     link_url:this.href
+   });">
+  Mail to Reserve
+</a>
             <!-- 正確な座標指定のGoogleマップURL -->
-            <a class="btn-ghost" target="_blank" rel="noopener" href="https://www.google.com/maps?q=36.307382167751115,138.6292358153694">📍 Google Mapsで見る</a>
-          </div>
+           <a class="btn-ghost"
+   target="_blank" rel="noopener"
+   href="https://www.google.com/maps?q=36.307382167751115,138.6292358153694"
+   onclick="gtag('event','map_link_click',{
+     event_category:'outbound',
+     event_label:'Google Maps View',
+     link_url:this.href
+   });">
+  📍 Google Mapsで見る
+</a>
         </div>
       </div>
     </section>
