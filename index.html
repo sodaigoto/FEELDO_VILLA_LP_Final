@@ -236,9 +236,39 @@
 
             <!-- 公式リンク群（■アイコン＋縦並び） -->
             <div class="ext-links">
-              <p class="ext-link">■ <a target="_blank" rel="noopener" href="https://www.instagram.com/feeldo_official/">Instagram ｜ その他の写真や動画はこちら</a></p>
-              <p class="ext-link">■ <a target="_blank" rel="noopener" href="https://suumo.jp/ikkodate/nagano/sc_kitasakugun/nc_78096645/">SUUMO ｜ A棟の面積や価格などの詳細はこちら</a></p>
-              <p class="ext-link">■ <a target="_blank" rel="noopener" href="https://suumo.jp/ikkodate/nagano/sc_kitasakugun/nc_78142741/">SUUMO ｜ B棟の面積や価格などの詳細はこちら</a></p>
+             <p class="ext-link">■
+  <a target="_blank" rel="noopener"
+     href="https://www.instagram.com/feeldo_official/"
+     onclick="gtag('event','instagram_click',{
+       event_category:'outbound',
+       event_label:'Instagram FEELDO',
+       link_url:this.href
+     });">
+    Instagram ｜ その他の写真や動画はこちら
+  </a>
+</p>
+             <p class="ext-link">■
+  <a target="_blank" rel="noopener"
+     href="https://suumo.jp/ikkodate/nagano/sc_kitasakugun/nc_78096645/"
+     onclick="gtag('event','suumo_a_click',{
+       event_category:'outbound',
+       event_label:'SUUMO A',
+       link_url:this.href
+     });">
+    SUUMO ｜ A棟の面積や価格などの詳細はこちら
+  </a>
+</p>
+             <p class="ext-link">■
+  <a target="_blank" rel="noopener"
+     href="https://suumo.jp/ikkodate/nagano/sc_kitasakugun/nc_78142741/"
+     onclick="gtag('event','suumo_b_click',{
+       event_category:'outbound',
+       event_label:'SUUMO B',
+       link_url:this.href
+     });">
+    SUUMO ｜ B棟の面積や価格などの詳細はこちら
+  </a>
+</p>
             </div>
           </div>
 
