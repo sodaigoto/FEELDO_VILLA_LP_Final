@@ -493,3 +493,47 @@ img { max-width: 100%; display: block; }
 .ext-link a:hover {
   text-decoration: underline;
 }
+/* SOLD OUT オーバーレイ */
+.card.sold .ratio {
+  position: relative;
+  overflow: hidden; /* 角丸を守る */
+}
+
+/* 半透明の暗幕 */
+.card.sold .ratio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+/* 中央のテキスト */
+.card.sold .ratio::after {
+  content: "SOLD OUT";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  /* 画面幅に応じて自然に可変 */
+  font-size: clamp(14px, 2.4vw, 28px);
+  pointer-events: none;
+}
+
+/* 画像のトーンを少し落として差別化（任意） */
+.card.sold img {
+  filter: grayscale(100%) contrast(0.9) brightness(0.9);
+}
+
+/* 角丸がある場合にレイヤーも合わせる（サイトの角丸値に合わせて調整） */
+.card .ratio,
+.card .ratio img,
+.card.sold .ratio::before,
+.card.sold .ratio::after {
+  border-radius: 12px;
+}
