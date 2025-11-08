@@ -537,3 +537,18 @@ img { max-width: 100%; display: block; }
 .card.sold .ratio::after {
   border-radius: 12px;
 }
+.sold-overlay {
+  position: absolute;
+  inset: 0;                       /* 全面に広げる */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45); /* 半透明の黒幕 */
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 12px;             /* 角丸を画像に合わせる */
+  pointer-events: none;            /* クリックを通す */
+}
